@@ -4,21 +4,21 @@
 
 $source_array = [
     [
-    	'name' => 'John',
-        'description' => 'Builder. I am engaged in the construction of parks and recreation areas.',
+    	'name' => 'Builder',
+        'description' => 'I am engaged in the construction of parks and recreation areas.',
         'dateStart' => 'April 2020',
         'dateEnd' => 'Current',
     ],
     [
-    	'name' => 'Jane',
-    	'description' => 'Medic. I work as a surgeon in a polyclinic.',
+    	'name' => 'Medic',
+    	'description' => 'I work as a surgeon in a polyclinic.',
         'dateStart' => 'December 2018',
         'dateEnd' => 'August 2021',
         
     ],
     [
-    	'name' => 'Ivan',
-        'description' => 'Driver. I have a personal car, I am engaged in cargo transportation.',
+    	'name' => 'Driver',
+        'description' => 'I have a personal car, I am engaged in cargo transportation.',
         'dateStart' => 'May 2022',
         'dateEnd' => 'October 2022',
     ],
@@ -54,14 +54,20 @@ $source_array = [
     
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="https://imgfon.ru/Images/Details_img_880px/Animals/glaza-belyy_fon-kotik-morda-polosatyy.webp" style="width:100%" alt="Avatar">
+          <img src="https://images.hdqwalls.com/wallpapers/bthumb/sunset-landscape-mountains-clouds-4k-jj.jpg" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Имя</h2>
+            <h2>Георгий</h2>
+            <style>
+            h2{
+            	color : white;
+            }
+            </style>
           </div>
         </div>
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Профессия</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Город, страна</p>
+          <p>Россия</p>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>E-mail</p>
           <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Телефон</p>
           <hr>
@@ -89,16 +95,8 @@ $source_array = [
 
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Языки</b></p>
           <p>Английский</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Испанский</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-          </div>
-          <p>Немецкий</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
           </div>
           <br>
         </div>
@@ -113,20 +111,17 @@ $source_array = [
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
         
-        <?php for($i = 0; $i < count($source_array); $i++): ?>
-        
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b><?php echo $source_array[$i]['name']; ?></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $source_array[$i]['dateStart']?> - <?php if($source_array[$i]['dateEnd'] == 'Current'): ?> <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <?php else: echo $source_array[$i]['dateEnd']; ?> 
-          </h6>
-          <?php endif; ?>
-          </h6>
-          <p><?php echo $source_array[$i]['description']; ?></p>
-          <hr>
-        </div>
+        <?php for($i = 0; $i < count($source_array); $i++): ?> 
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b><?php echo $source_array[$i]['name']; ?></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $source_array[$i]['dateStart']?> - <?php if($source_array[$i]['dateEnd'] == 'Current'): ?> <span class="w3-tag w3-teal w3-round">Current</span></h6>
+            <?php else: echo $source_array[$i]['dateEnd']; ?> 
+            <?php endif; ?>
+            </h6>
+            <p><?php echo $source_array[$i]['description']; ?></p>
+            <hr>
+          </div>
         <?php endfor; ?>
-  
       </div>
 
       <div class="w3-container w3-card w3-white">
@@ -134,19 +129,19 @@ $source_array = [
         <div class="w3-container">
           <h5 class="w3-opacity"><b>gb.ru</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-          <p>Web Development! All I need to know in one place</p>
+          <p>Software developer</p>
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>London Business School</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
+          <h5 class="w3-opacity"><b>University</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2021</h6>
+          <p>Bachelor</p>
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>School of Coding</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
+          <h5 class="w3-opacity"><b>School</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2004 - 2015</h6>
+          <p>General education</p><br>
         </div>
       </div>
 
